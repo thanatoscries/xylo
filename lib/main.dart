@@ -7,11 +7,8 @@ class XyloApp extends StatelessWidget {
   const XyloApp({super.key});
 
   void playSound(int soundNumber) async {
-    {
-      final player = AudioPlayer();
-      player.play(UrlSource('note$soundNumber.wav'));
-      await player.play(AssetSource('note$soundNumber.wav'));
-    }
+    final player = AudioPlayer();
+    await player.play(AssetSource('note$soundNumber.wav'));
   }
 
   Expanded buildKey(
